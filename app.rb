@@ -1,25 +1,17 @@
 require 'sinatra'
+require_relative './lib/tragamonedas.rb'
+require_relative './lib/jugador.rb'
 
 get '/' do
-	@@nombre = "Jose"
-	@@dificultad = ""
     erb :home
 end
 
-get '/jugar' do
-	@@resultado = ""
-	@@contador = 0
-	@@dificultad = "Facil"
-    erb :tragamonedas
+post '/entrar' do
+    @@juego = Tragamonedas.new Jugador.new(params['nombre'], params['nivel'].to_i)
+	erb :tragamonedas
 end
 
 post '/jugar' do
-	tipogame = params['tipojuego']
-	@@contador += 1
-	if tipogame == "iguales"
-		@@resultado = "1 1 1"
-	else
-		@@resultado = "1 2 3"
-	end
-	erb :tragamonedas
+    @@juego.jugar
+    erb :tragamonedas
 end

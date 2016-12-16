@@ -12,25 +12,22 @@ Scenario: ingreso dificultad
 	Given voy a la pagina inicial
 	Then elijo dificultad "Facil"
 
+Scenario: Tiradas empieza en 0
+	Given voy a la pagina jugar
+	Then veo "Tiradas: 0"
+
+Scenario: Juego 1 tiradas marca 1
+	Given voy a la pagina jugar
+    When toco jugar
+	Then veo "Tiradas: 1"
+
 Scenario: boton jugar devuelve numero iguales
 	Given voy a la pagina jugar
-	When jugar "iguales"
-	Then veo "1 1 1"
+	When jugar "1,1,1"
+	Then veo "[1,1,1]"
 
 Scenario: boton jugar devuelve numero distintos
 	Given voy a la pagina jugar
-	When jugar "distintos"
-	Then veo "1 2 3"
-
-Scenario: contador empieza en 0
-	Given voy a la pagina jugar
-	Then veo contador en 0
-
-Scenario: contador suma jugadas
-	Given voy a la pagina jugar
-	When jugar "distintos"
-	Then veo contador en 1
-
-
-
+	When jugar "1,2,3"
+	Then veo "[1,2,3]"
 

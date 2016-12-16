@@ -1,17 +1,16 @@
 <h1>Tragamonedas</h1>
-<form method="get" action="/jugar">
+<form method="post" action="/entrar">
 	<div>
 		<p>Ingrese su nombre</p>
-		<input type="text" name="nombre" value="Jose">
+		<input type="text" name="nombre" value="">
 	</div>
 	<div>
 		<p>Ingrese la dificultad</p>
-		<select name="dificultad">
-			<option value="facil" selected>Facil</option>
-			<option value="normal">Normal</option>
-			<option value="dificil">Dificil</option>
+		<select name="nivel">
+			<option value="1" selected>Facil</option>
+			<option value="2">Normal</option>
+			<option value="3">Dificil</option>
 		</select>
 	</div>
-	<input type="submit" name="jugar" value="Ingresar">
+	<input type="submit" name="ingresar" value="Ingresar">
 </form>
-

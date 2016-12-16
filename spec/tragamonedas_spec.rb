@@ -19,15 +19,15 @@ describe "Tragamonedas" do
 	it "Juego: Me da valores iguales" do 
         jugador = Jugador.new "Player", 1
         juego = Tragamonedas.new jugador
-        resultado = juego.simular "iguales"
-        expect(resultado).to eq([1,1,1])
+        juego.simular "1,1,1"
+        expect(juego.getTirada).to eq([1,1,1])
 	end
 
 	it "Juego: Me da valores distintos" do 
         jugador = Jugador.new "Player", 1
         juego = Tragamonedas.new jugador
-        resultado = juego.simular "distinto"
-        expect(resultado).to eq([1,2,3])
+        juego.simular "1,2,3"
+        expect(juego.getTirada).to eq([1,2,3])
 	end
 
 	it "Juego: jugador juega 2 veces y contador jugadas es 2" do 
