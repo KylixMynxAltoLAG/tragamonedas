@@ -1,12 +1,12 @@
 class Jugador
 
-    attr_accessor :puntaje, :tiradas
+    attr_accessor :creditos, :tiradas
     attr_reader :nombre, :nivel
 
     def initialize nombre, nivel
         @nombre = nombre
         @nivel = nivel
-        @puntaje = 0
+        @creditos = 10
         @tiradas = 0
     end
 

@@ -9,10 +9,10 @@ describe "Tragamonedas" do
         jugador.nivel.should == 1
 	end
 
-	it "Inicio: Entro jugador puntaje y cantidad de tiradas es 0" do 
+	it "Inicio: Entro jugador creditos es 10 y cantidad de tiradas es 0" do 
         jugador = Jugador.new "Player", 1
         juego = Tragamonedas.new jugador
-        juego.getJugador.puntaje.should == 0
+        juego.getJugador.creditos.should == 10
         juego.getJugador.tiradas.should == 0
 	end
 

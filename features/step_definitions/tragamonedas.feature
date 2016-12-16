@@ -16,7 +16,7 @@ Scenario: Tiradas empieza en 0
 	Given voy a la pagina jugar
 	Then veo "Tiradas: 0"
 
-Scenario: Juego 1 tiradas marca 1
+Scenario: Juego 1 tiradas es 1
 	Given voy a la pagina jugar
     When toco jugar
 	Then veo "Tiradas: 1"
@@ -25,9 +25,11 @@ Scenario: boton jugar devuelve numero iguales
 	Given voy a la pagina jugar
 	When jugar "1,1,1"
 	Then veo "[1,1,1]"
+    Then veo "Creditos: 19"
 
 Scenario: boton jugar devuelve numero distintos
 	Given voy a la pagina jugar
 	When jugar "1,2,3"
 	Then veo "[1,2,3]"
+    Then veo "Creditos: 9"
 

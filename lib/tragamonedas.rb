@@ -18,12 +18,14 @@ class Tragamonedas
     end
 
     def jugar
+        @jugador.creditos -= 1
         if !@simulacion
             @tirada = []
             @tirada = [1+Random.rand(3), 1+Random.rand(3), 1+Random.rand(3)]
         end
         @jugador.tiradas += 1
         @simulacion = false
+        getEsGanadora
         return @tirada
     end
 
@@ -33,9 +35,9 @@ class Tragamonedas
 
     def getEsGanadora
         salida = ""
-        puts @tirada.class
         if @tirada.class.to_s == "Array" && @tirada.uniq.size == 1
-            salida = "Ganaste"
+            salida = "(GANASTE 10 CREDITOS)"
+            @jugador.creditos += 10
         end
         return salida
     end

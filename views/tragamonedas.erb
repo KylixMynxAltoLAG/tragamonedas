@@ -2,13 +2,13 @@
 <div>
 	<h2>Hola <%= @@juego.getJugador.nombre %></h2>
     <p>Nivel Dificultad: <%= @@juego.getJugador.getNivelText %></p>
-    <!--<p>Puntaje: <%= @@juego.getJugador.puntaje %></p>-->
+    <p>Creditos: <%= @@juego.getJugador.creditos %></p>
     <p>Tiradas: <%= @@juego.getJugador.tiradas %></p>
 </div>
 <div>
-<h4>Resultado</h4>
-<p><%= @@juego.getTirada %></p>
-<h1><%= @@juego.getEsGanadora %></h1>
+
+<h1><%= @@juego.getTirada %> <%= @@juego.getEsGanadora %></h1>
+<h1></h1>
 </div>
 <form method="post" action="/jugar">
 	<input type="submit" value="jugar">
