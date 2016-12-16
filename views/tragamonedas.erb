@@ -1,5 +1,19 @@
 <h1>Tragamonedas</h1>
+<div>
+	<h4>Hola <%= @@nombre %></h4>
+</div>
+<div>
+<h4>Resultado</h4>
 <p><%= @@resultado %></p>
+</div>
+<div>
+<h4>Contador</h4>
+<span><%= @@contador %></span>
+</div>
+<div>
+<h4>Nivel</h4>
+<span><%= @@dificultad %></span>
+</div>
 <form method="post" action="/jugar">
 	<input type="submit" value="jugar">
 	<input type="hidden" value="" name="tipojuego" id="tipojuego">
