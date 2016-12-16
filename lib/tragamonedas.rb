@@ -38,6 +38,7 @@ class Tragamonedas
         if @tirada.class.to_s == "Array" && @tirada.uniq.size == 1
             salida = "(GANASTE 10 CREDITOS)"
             @jugador.creditos += 10
+            fork { exec 'mpg123','-q', '/home/vagrant/csd/tragamonedas/public/jackpot.mp3' }
         end
         return salida
     end
