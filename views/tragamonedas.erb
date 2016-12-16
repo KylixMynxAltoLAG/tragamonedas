@@ -7,7 +7,8 @@
 </div>
 <div>
 
-<h1><%= @@juego.getTirada %> <%= @@juego.getEsGanadora %></h1>
+<img src="<%= @p1 %>" style="width:100px; margin:0 10px;"> <img src="<%= @p2 %>" style="width:100px; margin:0 10px;"> <img src="<%= @p3 %>" style="width:100px;margin:0 10px;"> 
+<h1><%= @@juego.getEsGanadora %></h1>
 <h1></h1>
 </div>
 <form method="post" action="/jugar">
