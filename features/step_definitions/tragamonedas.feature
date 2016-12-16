@@ -13,3 +13,5 @@ Scenario: boton jugar devuelve numero distintos
 	Given voy a la pagina inicial
 	When jugar "distintos"
 	Then veo "1 2 3"
+
+
